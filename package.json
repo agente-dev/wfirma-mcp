@@ -1,10 +1,12 @@
 {
-  "name": "wfirma-mcp",
+  "name": "@agente-dev/wfirma-mcp",
   "version": "1.0.0",
   "description": "Unofficial read-only MCP server for the wFirma API v2 (api2.wfirma.pl): companies, invoices, contractors, expenses, payments.",
   "type": "module",
   "license": "MIT",
-  "private": true,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/agente-dev/wfirma-mcp.git"
