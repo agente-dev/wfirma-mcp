@@ -1,0 +1,22 @@
+{
+  "source": "https://doc.wfirma.pl/",
+  "reviewedAt": "2026-08-03",
+  "tools": [
+    { "name": "wfirma_list_companies", "endpoints": ["/user_companies/find"], "risk": "read", "sourceTest": "test/tools.test.ts" },
+    { "name": "wfirma_list_invoices", "endpoints": ["/invoices/find"], "risk": "read", "sourceTest": "test/tools.test.ts" },
+    { "name": "wfirma_get_invoice", "endpoints": ["/invoices/get/"], "risk": "read", "sourceTest": "test/tools.test.ts" },
+    { "name": "wfirma_list_contractors", "endpoints": ["/contractors/find"], "risk": "read", "sourceTest": "test/tools.test.ts" },
+    { "name": "wfirma_get_contractor", "endpoints": ["/contractors/get/"], "risk": "read", "sourceTest": "test/tools.test.ts" },
+    { "name": "wfirma_list_expenses", "endpoints": ["/expenses/find"], "risk": "read", "sourceTest": "test/tools.test.ts" },
+    { "name": "wfirma_get_expense", "endpoints": ["/expenses/get/"], "risk": "read", "sourceTest": "test/tools.test.ts" },
+    { "name": "wfirma_list_payments", "endpoints": ["/payments/find"], "risk": "read", "sourceTest": "test/tools.test.ts" },
+    { "name": "wfirma_get_payment", "endpoints": ["/payments/get/"], "risk": "read", "sourceTest": "test/tools.test.ts" }
+  ],
+  "unsupportedOfficialApiCategories": [
+    { "category": "all add, edit, and delete actions", "reason": "Initial integration is deliberately read-only." },
+    { "category": "invoice download and send", "reason": "Binary transport and outbound communication need separate review." },
+    { "category": "invoice fiscalization and KSeF", "reason": "Tax-reporting mutations require a separate governed design." },
+    { "category": "payment mutations", "reason": "Monetary state changes are excluded from the initial integration." },
+    { "category": "documents, goods, warehouse, declarations, payroll, and webhooks", "reason": "Not yet source-reviewed and mapped." }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "name": "wfirma-mcp",
+  "version": "1.0.0",
+  "description": "Unofficial read-only MCP server for the wFirma API v2 (api2.wfirma.pl): companies, invoices, contractors, expenses, payments.",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agente-dev/wfirma-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/agente-dev/wfirma-mcp/issues"
+  },
+  "homepage": "https://github.com/agente-dev/wfirma-mcp#readme",
+  "keywords": [
+    "wfirma",
+    "mcp",
+    "model-context-protocol",
+    "accounting",
+    "bookkeeping",
+    "polish"
+  ],
+  "bin": {
+    "wfirma-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --format=esm --target=node20 --packages=bundle --charset=utf8 --legal-comments=none --sourcemap --outfile=dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --config vitest.config.ts",
+    "audit:prod": "pnpm audit --prod --audit-level high"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.29.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5",
+    "vitest": "^4.1.0"
+  },
+  "packageManager": "pnpm@10.4.1",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}
