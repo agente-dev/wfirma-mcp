@@ -3,11 +3,11 @@
   "name": "io.github.agente-dev/wfirma-mcp",
   "description": "Unofficial read-only MCP server for the wFirma API v2: invoices, contractors, expenses, payments.",
   "version": "1.0.0",
-  "authors": [{ "name": "Agente Dev" }],
-  "website": "https://github.com/agente-dev/wfirma-mcp#readme",
+  "websiteUrl": "https://github.com/agente-dev/wfirma-mcp#readme",
   "repository": {
-    "url": "https://github.com/agente-dev/wfirma-mcp",
-    "id": "github.com/agente-dev/wfirma-mcp"
+    "id": "1347701493",
+    "source": "github",
+    "url": "https://github.com/agente-dev/wfirma-mcp"
   },
   "packages": [
     {
