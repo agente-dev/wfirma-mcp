@@ -1,0 +1,47 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.agente-dev/wfirma-mcp",
+  "description": "Unofficial read-only MCP server for the wFirma API v2: invoices, contractors, expenses, payments.",
+  "version": "1.0.0",
+  "authors": [{ "name": "Agente Dev" }],
+  "website": "https://github.com/agente-dev/wfirma-mcp#readme",
+  "repository": {
+    "url": "https://github.com/agente-dev/wfirma-mcp",
+    "id": "github.com/agente-dev/wfirma-mcp"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "wfirma-mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "WFIRMA_ACCESS_KEY",
+          "description": "wFirma access key from your panel (Integrations → API)",
+          "isRequired": true,
+          "format": "string",
+          "isSecret": true
+        },
+        {
+          "name": "WFIRMA_SECRET_KEY",
+          "description": "wFirma secret key paired with the access key",
+          "isRequired": true,
+          "format": "string",
+          "isSecret": true
+        },
+        {
+          "name": "WFIRMA_APP_KEY",
+          "description": "wFirma app key for the API application",
+          "isRequired": true,
+          "format": "string",
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "tools": ["wfirma_list_companies", "wfirma_list_invoices", "wfirma_get_invoice", "wfirma_list_contractors", "wfirma_get_contractor", "wfirma_list_expenses", "wfirma_get_expense", "wfirma_list_payments", "wfirma_get_payment"],
+  "tags": ["accounting", "bookkeeping", "polish", "finance"]
+}
